@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class Contact {
@@ -65,4 +66,7 @@ public class Contact {
     public void setDeleted(boolean deleted) {
         this.deleted = deleted;
     }
+
+    @OneToMany
+    Set<Place> place;
 }
