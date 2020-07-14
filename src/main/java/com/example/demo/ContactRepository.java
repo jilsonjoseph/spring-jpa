@@ -4,4 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface ContactRepository extends CrudRepository<Contact, Integer> {
 
+    Contact findByEmail(String email);
+
 }
